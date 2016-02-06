@@ -9,11 +9,19 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-
-  @IBAction func buttonTapped(sender: UIButton) {
-    sender.removeFromSuperview()
-  }
-
+    
+    //MARK: - Outlets
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    //MARK: - Actions
+    @IBAction func buttonTapped(sender: UIButton) {
+        sender.removeFromSuperview()
+    }
+    
+    //MARK: - UIViewController
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        nameLabel.text = "Hubert Blaine Wolfeschlegelsteinhausenbergerdorf"
+    }
 }
 
